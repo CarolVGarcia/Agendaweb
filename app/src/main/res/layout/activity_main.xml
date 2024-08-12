@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tabla1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        tools:context="${relativePackage}.${activityClass}" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="@string/nombre"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:inputType="textPersonName" >
+            <requestFocus />
+        </EditText>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel2"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/edtTelefono1"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                />
+            <EditText
+                android:id="@+id/edtTelefono2"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone" />
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="@string/direccion"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="@string/notas"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtNotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.97"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <CheckBox
+            android:id="@+id/cbxFavorito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorito"
+            android:textStyle="bold" />
+        <TableRow >
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="@string/btn_limpiar" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAF50"
+                android:text="@string/btn_guardar" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnListar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:text="@string/btn_listar" />
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
